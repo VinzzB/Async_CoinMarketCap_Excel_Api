@@ -8,8 +8,8 @@ You can optionally supress the security warnings for this excel file by making i
 
 ## How Does It Work
 
--  This library loads 1500 coins (by default) from CoinMarketCap.com API (CMC-API). The can be adjusted in the Workbook_BeforeClose() method by calling the Setup() method in the Reader class.
--  Prices are shown in USD by default. You can choose to convert prices to another currency in the Workbook_BeforeClose() method by calling the Setup() method in the Reader class.
+-  This library loads 1500 coins (by default) from CoinMarketCap.com API (CMC-API). The can be adjusted in the Workbook_Open() method by calling the Setup() method in the Reader class.
+-  Prices are shown in USD by default. You can choose to convert prices to another currency in the Workbook_Open() method by calling the Setup() method in the Reader class.
 all supported currencies can be found at https://coinmarketcap.com/api/
 - The refresh timer is also adjustable through the StartTimer() method.
 
