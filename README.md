@@ -1,4 +1,4 @@
-# Async_CoinMarketCap_Excel_Api
+# Async CoinMarketCap Excel Api
 This library loads Crypto Currency data from the CoinMarketCap API into Memory. All data can be exposed through Excel functions in a worksheet.
 By default, data is refreshed every 2 minutes. 
 
@@ -8,11 +8,12 @@ You can optionally supress the security warnings for this excel file by making i
 
 ## How Does It Work
 
--  This library loads 1500 coins (by default) from CoinMarketCap.com API (CMC-API). The can be adjusted in the Workbook_Open() method by calling the Setup() method in the Reader class.
+-  This library loads 1500 coins (by default) from CoinMarketCap.com API (CMC-API) in one request and without blocking the user interface. The amount of coins and requests can be adjusted in the Workbook_Open() method by calling the Setup() method in the Reader class. (see example)
 -  Prices are shown in USD by default. You can choose to convert prices to another currency in the Workbook_Open() method by calling the Setup() method in the Reader class.
 all supported currencies can be found at https://coinmarketcap.com/api/
 - The refresh timer is also adjustable through the StartTimer() method.
 
+Examples (open VBA in Excel with ALT + F11)
 ```vba
 Private Sub Workbook_Open()
     
